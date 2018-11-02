@@ -3,18 +3,20 @@ function construstTimeTable(timeTable, talksData) {
                .filter(function (k) {return timeTable[k];})
                .sort()
                .map(function (time) {
+                 // console.log(time);
                  var name = timeTable[time];
+                 // console.log(name);
                  var index = 0;
 
-                 if (name == "なおと") {
-                   name = "宇佐美尚人";
-                 } else if (name.indexOf("こすも") == 0) {
-                   index = parseInt(name.charAt(3)) - 1;
-                   name = "宇佐美こすも";
-                 }
+                 // if (name == "なおと") {
+                 //   name = "宇佐美尚人";
+                 // } else if (name.indexOf("こすも") == 0) {
+                 //   index = parseInt(name.charAt(3)) - 1;
+                 //   name = "宇佐美こすも";
+                 // }
 
                  var talk = talksData.filter(function (t) { return t.name.indexOf(name) == 0; })[index];
-
+                 // console.log(talk);
                  return { time: time, name: talk.name, title: talk.title, major: talk.affiliation };
                });
 }
