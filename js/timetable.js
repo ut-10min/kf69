@@ -27,8 +27,8 @@ $(function () {
 
   var template = $('#template').html();
   Mustache.parse(template);
-  var renderedFirst = Mustache.render(template, {table: firstDayTable, header: "11/24(金)"});
-  var renderedSecond = Mustache.render(template, {table: secondDayTable, header: "11/25(土)"});
-  var renderedThird = Mustache.render(template, {table: thirdDayTable, header: "11/26(日)"});
+  var renderedFirst = Mustache.render(template, {table: firstDayTable, header: "11/23(金)"});
+  var renderedSecond = Mustache.render(template, {table: secondDayTable, header: "11/24(土)"});
+  var renderedThird = Mustache.render(template, {table: thirdDayTable, header: "11/25(日)"});
   $('.article-headline').html(renderedFirst + "<br />" + renderedSecond + "<br />" + renderedThird);
 });
