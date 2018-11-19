@@ -84,6 +84,15 @@ body {
   width: 100%;
   margin: 0 auto;
   background: #fff;
+
+  a {
+    &.anchor {
+      display: block;
+      visibility: none;
+      position:relative;
+      top: -$nav-height;
+    }
+  }
 }
 
 .full-article {
